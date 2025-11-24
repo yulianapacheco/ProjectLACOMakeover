@@ -115,6 +115,7 @@ a:hover {
     border-radius: 20px;
     margin-top: 40px;
     box-shadow: 0 0 20px rgba(150, 90, 255, 0.2);
+    margin-top: 120px !important;
 }
 
 /* ---------- TEAM GRID ---------- */
