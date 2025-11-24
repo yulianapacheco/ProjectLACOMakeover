@@ -1,39 +1,54 @@
-/* ------------ GENERAL ------------ */
+/* ---------- GENERAL DARK SPACE MODE ---------- */
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
-    background: #f7f2ff;
-    color: #2c225e;
+    color: #dcd7ff;
+    background: radial-gradient(circle at top, #1a0047, #050014);
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
-    margin: 0;
-    font-weight: 700;
-}
-
-p {
-    line-height: 1.6;
+    color: #bea3ff;
 }
 
 a {
+    color: #9b6bff;
     text-decoration: none;
-    color: inherit;
 }
 
-/* ------------ NAVBAR ------------ */
+a:hover {
+    color: #cfa9ff;
+}
+
+/* ---------- STARFIELD BACKGROUND CANVAS ---------- */
+#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+
+/* ---------- NAVBAR ---------- */
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 20px 40px;
-    background: white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    background: rgba(10, 0, 30, 0.6);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(140, 80, 255, 0.3);
+    border-bottom: 1px solid rgba(160, 100, 255, 0.25);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo {
-    color: #6b48ff;
     font-size: 24px;
+    color: #caa2ff;
     font-weight: bold;
+    text-shadow: 0 0 10px #7b3bff;
 }
 
 .navbar ul {
@@ -44,106 +59,124 @@ a {
 
 .navbar a {
     font-weight: 500;
-    color: #2c225e;
 }
 
 .navbar a.active,
 .navbar a:hover {
-    color: #6b48ff;
+    color: #d6b8ff;
+    text-shadow: 0 0 8px #9b6bff;
 }
 
-/* ------------ HERO ------------ */
+/* ---------- HERO ---------- */
 .hero {
-    padding: 120px 40px;
+    padding: 140px 40px;
     text-align: center;
-    background: linear-gradient(135deg, #d9c7ff, #bfa8ff, #9c7cff);
-    color: white;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+    font-size: 60px;
+    text-shadow: 0 0 25px #7f52ff, 0 0 55px #5a2aff;
 }
 
 .hero p {
-    max-width: 700px;
+    max-width: 720px;
     margin: auto;
-    font-size: 18px;
-    opacity: 0.95;
+    font-size: 20px;
+    opacity: 0.9;
 }
 
 .btn-primary {
-    background: white;
-    color: #6b48ff;
-    padding: 12px 28px;
-    display: inline-block;
+    padding: 14px 35px;
     margin-top: 20px;
-    border-radius: 30px;
+    background: linear-gradient(135deg, #5a2aff, #9b6bff);
+    color: white;
+    border-radius: 40px;
     font-weight: 600;
+    box-shadow: 0 0 15px #7f52ff, 0 0 30px #5a2aff;
+    transition: 0.3s;
 }
 
-/* ------------ SECTIONS ------------ */
-.overview, .content-section, .team-grid, .contact-grid {
+.btn-primary:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 25px #cda8ff, 0 0 45px #8c5fff;
+}
+
+/* ---------- CONTENT SECTIONS ---------- */
+.page-header,
+.content-section {
     padding: 60px 40px;
     max-width: 1000px;
     margin: auto;
+    background: rgba(10, 0, 30, 0.4);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: 0 0 20px rgba(150, 90, 255, 0.2);
 }
 
-.page-header {
-    padding: 60px 40px;
-    text-align: center;
-}
-
-/* ------------ TEAM GRID ------------ */
+/* ---------- TEAM GRID ---------- */
 .team-grid {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
 }
 
 .team-card {
-    background: white;
-    padding: 25px;
-    border-radius: 16px;
     text-align: center;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(40, 0, 80, 0.4);
+    box-shadow: 0 0 20px rgba(150, 80, 255, 0.25);
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(200, 130, 255, 0.35);
 }
 
 .team-card img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    object-fit: cover;
+    box-shadow: 0 0 30px rgba(180, 120, 255, 0.45);
 }
 
-/* ------------ CONTACT GRID ------------ */
-.contact-grid {
-    display: grid;
-    gap: 25px;
-}
-
+/* ---------- CONTACT ---------- */
 .contact-card {
-    background: white;
     padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    background: rgba(40, 0, 80, 0.4);
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(160, 90, 255, 0.25);
+    backdrop-filter: blur(6px);
 }
 
-/* ------------ BUTTONS ------------ */
+/* ---------- SECONDARY BUTTON ---------- */
 .btn-secondary {
-    background: #6b48ff;
+    background: rgba(120, 60, 255, 0.8);
+    padding: 10px 26px;
     color: white;
-    padding: 10px 22px;
     border-radius: 30px;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 12px;
+    transition: 0.3s;
 }
 
-/* ------------ FOOTER ------------ */
+.btn-secondary:hover {
+    background: rgba(160, 110, 255, 1);
+    box-shadow: 0 0 20px rgba(200, 150, 255, 0.6);
+}
+
+/* ---------- FOOTER ---------- */
 footer {
     text-align: center;
-    padding: 25px;
-    background: #eadcff;
-    margin-top: 40px;
+    padding: 30px;
+    color: #bba3ff;
+    margin-top: 50px;
+    opacity: 0.85;
 }
