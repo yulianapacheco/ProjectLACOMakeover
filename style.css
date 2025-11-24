@@ -120,35 +120,39 @@ a:hover {
 
 /* ---------- TEAM GRID ---------- */
 .team-grid {
-    padding: 60px 40px;
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centers cards */
+    gap: 40px;
+    padding: 60px 20px;
 }
 
+
 .team-card {
+    width: 100%;            
+    max-width: 650px;        /* 🔥 same width as contact cards */
+    padding: 35px;
+    background: rgba(40, 0, 80, 0.45);
+    border-radius: 22px;
+    box-shadow: 0 0 30px rgba(150, 80, 255, 0.35);
+    backdrop-filter: blur(10px);
     text-align: center;
-    padding: 25px;
-    border-radius: 18px;
-    background: rgba(40, 0, 80, 0.4);
-    box-shadow: 0 0 20px rgba(150, 80, 255, 0.25);
-    backdrop-filter: blur(6px);
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .team-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 35px rgba(200, 130, 255, 0.35);
+    box-shadow: 0 0 45px rgba(200, 130, 255, 0.5);
 }
 
+
 .team-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 160px;
+    height: 160px;
     object-fit: cover;
-    box-shadow: 0 0 30px rgba(180, 120, 255, 0.45);
+    border-radius: 50%;
+    margin-bottom: 18px;
+    box-shadow: 0 0 35px rgba(180, 120, 255, 0.5);
 }
 
 /* ---------- CONTACT ---------- */
