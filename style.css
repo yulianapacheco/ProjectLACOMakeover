@@ -33,7 +33,9 @@ a:hover {
 /* ---------- NAVBAR ---------- */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;     /* centers the nav */
+    align-items: center;
+    gap: 40px;                   /* spacing between logo + links */
     padding: 20px 40px;
     background: rgba(10, 0, 30, 0.6);
     backdrop-filter: blur(6px);
@@ -43,6 +45,7 @@ a:hover {
     top: 0;
     z-index: 10;
 }
+
 
 .logo {
     font-size: 24px;
