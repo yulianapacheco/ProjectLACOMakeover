@@ -83,10 +83,11 @@ a:hover {
 
 .hero p {
     max-width: 720px;
-    margin: auto;
+    margin: 0 auto 25px auto; /* bottom margin creates spacing */
     font-size: 20px;
     opacity: 0.9;
 }
+
 
 .btn-primary {
     padding: 14px 35px;
@@ -116,6 +117,8 @@ a:hover {
     margin-top: 40px;
     box-shadow: 0 0 20px rgba(150, 90, 255, 0.2);
     margin-top: 120px !important;
+    text-align: center;
+
 }
 
 /* ---------- TEAM GRID ---------- */
