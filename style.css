@@ -69,9 +69,12 @@ a:hover {
 
 /* ---------- HERO ---------- */
 .hero {
-    padding: 140px 40px;
+    padding: 200px 40px 240px 40px; /* top, left/right, bottom */
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
+
 
 .hero h1 {
     font-size: 60px;
