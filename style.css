@@ -152,13 +152,24 @@ a:hover {
 }
 
 /* ---------- CONTACT ---------- */
+/* ------- CONTACT GRID FIX (center + spacing) ------- */
+.contact-grid {
+    max-width: 900px;        /* keeps cards centered */
+    margin: 0 auto;          /* centers the whole block */
+    padding: 40px 20px;      /* breathing room from edges */
+    display: grid;
+    gap: 30px;               /* space between cards */
+}
+
 .contact-card {
     padding: 25px;
-    background: rgba(40, 0, 80, 0.4);
+    background: rgba(40, 0, 80, 0.6);
     border-radius: 18px;
-    box-shadow: 0 0 20px rgba(160, 90, 255, 0.25);
+    box-shadow: 0 0 20px rgba(160, 90, 255, 0.35);
     backdrop-filter: blur(6px);
+    width: 100%;
 }
+
 
 /* ---------- SECONDARY BUTTON ---------- */
 .btn-secondary {
